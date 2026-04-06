@@ -1,0 +1,19 @@
+`--- Detection: Failed Logon Spike (RDP Brute Force) ---`
+`MITRE ATT&CK: T1110.001 - Brute Force: Password Guessing`
+`Data Source: Windows Security EventCode=4625`
+`Author: Armando`
+`Description: Detects brute force attempts by identifying a spike in failed logon events from a single source IP within a short time window.`
+`Threshold: 10+ failures from the same source (adjustable based on environment baseline)`
+
+index=endpoint EventCode=4625
+| stats count by src_ip, dest, user
+| where count > 10
+| sort -count
+
+`--- Correlated Query: Brute Force Followed by Successful Logon ---`
+`Description: Identifies accounts where a burst of failed logons is followed by a successful logon — indicates a successful brute force attack.`
+
+index=endpoint EventCode IN (4625, 4624) user=*
+| sort _time
+| stats count(eval(EventCode=4625)) as failures, count(eval(EventCode=4624)) as successes by user, src_ip
+| where failures > 5 AND successes > 0

@@ -1,0 +1,27 @@
+`--- Detection: Local Account Creation ---`
+`MITRE ATT&CK: T1136.001 - Create Account: Local Account`
+`Data Source: Windows Security EventCode=4720, Sysmon EventCode=1`
+`Author: Armando`
+`Description: Detects creation of new local user accounts, a common persistence technique used by attackers after initial compromise.`
+
+`--- Query 1: Security Event - Account Created ---`
+
+index=endpoint EventCode=4720 host="target-PC"
+| table _time, user, Account_Name, Security_ID
+| sort -_time
+
+`--- Query 2: Sysmon Process - net.exe /add command ---`
+`Description: Catches the actual command used to create the account via net.exe or net1.exe`
+
+index=endpoint source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+  (Image="*\\net.exe" OR Image="*\\net1.exe")
+  CommandLine="*user*" CommandLine="*/add*"
+| table _time, Computer, User, Image, CommandLine, ParentImage
+| sort -_time
+
+`--- Query 3: Privilege Escalation Check - Account Added to Admin Group ---`
+`Description: Check if the new account was added to a privileged group (Administrators)`
+
+index=endpoint EventCode=4732
+| table _time, user, MemberName, TargetUserName
+| sort -_time
