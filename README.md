@@ -101,7 +101,7 @@ All logs are forwarded to Splunk via the Universal Forwarder into the `endpoint`
 
 ## Practice Drills
 
-26 hands-on exercises across two skill tracks, each with 4 difficulty levels. Every drill follows a **DO → FIND/VERIFY → UNDERSTAND** format: perform an action, find evidence or verify results, then analyze what you learned.
+37 hands-on exercises across three skill tracks. Every drill follows a **DO → FIND/VERIFY → UNDERSTAND** format: perform an action, find evidence or verify results, then analyze what you learned.
 
 ### Splunk / SIEM Track (12 drills)
 
@@ -125,6 +125,16 @@ See: [docs/splunk-practice-drills.md](docs/splunk-practice-drills.md)
 
 See: [docs/ad-practice-drills.md](docs/ad-practice-drills.md)
 
+### Wireshark / Packet Analysis Track (11 drills)
+
+| Level | Focus | Drills |
+|-------|-------|--------|
+| **Level 1** | Wireshark Basics | Capture traffic, display filters, TCP streams, DNS, ICMP |
+| **Level 2** | Security Analysis | Port scans, RDP brute force, Kerberos auth, malware pcaps |
+| **Level 3** | SOC Investigations | Full attack capture, CyberDefenders CTF, Unit 42 quizzes |
+
+See: [docs/wireshark-practice-drills.md](docs/wireshark-practice-drills.md)
+
 ## Analyst Reference Guide
 
 Essential resources for SOC analyst work, with practice exercises for building fluency:
@@ -147,6 +157,7 @@ See the full guide: [docs/analyst-references.md](docs/analyst-references.md)
 - **SIEM:** Splunk Enterprise (indexer + search head on Ubuntu Server)
 - **Endpoint Telemetry:** Sysmon (Microsoft Sysinternals), Splunk Universal Forwarder
 - **Attack Simulation:** Atomic Red Team (Red Canary), Kali Linux, xfreerdp
+- **Network Analysis:** Wireshark
 - **Framework:** MITRE ATT&CK
 
 ---
@@ -163,6 +174,7 @@ ad-detection-lab/
 │   ├── lessons-learned.md        # Troubleshooting and fixes
 │   ├── splunk-practice-drills.md # 12 hands-on SPL exercises (4 levels)
 │   ├── ad-practice-drills.md    # 14 hands-on AD exercises (4 levels)
+│   ├── wireshark-practice-drills.md # 11 hands-on packet analysis exercises (3 levels)
 │   └── analyst-references.md    # MITRE ATT&CK and Event ID research guide
 ├── network-diagram/
 │   └── ad-lab-topology.md        # Mermaid network diagram
