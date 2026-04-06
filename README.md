@@ -112,6 +112,19 @@ All logs are forwarded to Splunk via the Universal Forwarder into the `endpoint`
 
 See the full drill set: [docs/splunk-practice-drills.md](docs/splunk-practice-drills.md)
 
+## Analyst Reference Guide
+
+Essential resources for SOC analyst work, with practice exercises for building fluency:
+
+| Resource | What It Is | When to Use |
+|----------|-----------|-------------|
+| [MITRE ATT&CK](https://attack.mitre.org/) | Framework mapping adversary tactics, techniques, and procedures | Categorizing attacks, writing detections, gap analysis |
+| [Windows Event Encyclopedia](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/) | Detailed breakdown of every Windows Security Event ID and its fields | Decoding event fields, understanding what triggered an alert |
+
+Includes 5 research exercises: decoding failed logons, mapping attacks to ATT&CK, building detections from the framework, Event ID deep dives, and threat group research.
+
+See the full guide: [docs/analyst-references.md](docs/analyst-references.md)
+
 ---
 
 ## Tools & Technologies
@@ -135,7 +148,8 @@ ad-detection-lab/
 │   ├── splunk-setup.md           # Splunk indexer + forwarder config
 │   ├── sysmon-config.md          # Sysmon configuration choices
 │   ├── lessons-learned.md        # Troubleshooting and fixes
-│   └── splunk-practice-drills.md # 12 hands-on SPL exercises (4 levels)
+│   ├── splunk-practice-drills.md # 12 hands-on SPL exercises (4 levels)
+│   └── analyst-references.md    # MITRE ATT&CK and Event ID research guide
 ├── network-diagram/
 │   └── ad-lab-topology.md        # Mermaid network diagram
 ├── detections/
