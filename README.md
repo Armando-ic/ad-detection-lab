@@ -99,9 +99,11 @@ All logs are forwarded to Splunk via the Universal Forwarder into the `endpoint`
 
 ---
 
-## Splunk Practice Drills
+## Practice Drills
 
-12 hands-on exercises across 4 difficulty levels to build SPL query skills using this lab's real data. Each drill follows a **DO → FIND → UNDERSTAND** format: perform an action, write the Splunk query, then analyze what you found.
+26 hands-on exercises across two skill tracks, each with 4 difficulty levels. Every drill follows a **DO → FIND/VERIFY → UNDERSTAND** format: perform an action, find evidence or verify results, then analyze what you learned.
+
+### Splunk / SIEM Track (12 drills)
 
 | Level | Focus | Drills |
 |-------|-------|--------|
@@ -110,7 +112,18 @@ All logs are forwarded to Splunk via the Universal Forwarder into the `endpoint`
 | **Level 3** | Analyst Thinking | Full attack timelines, anomaly hunting, dashboard building |
 | **Level 4** | Advanced SPL | Stats, timechart, eval, transaction correlation |
 
-See the full drill set: [docs/splunk-practice-drills.md](docs/splunk-practice-drills.md)
+See: [docs/splunk-practice-drills.md](docs/splunk-practice-drills.md)
+
+### Active Directory Track (14 drills)
+
+| Level | Focus | Drills |
+|-------|-------|--------|
+| **Level 1** | AD Basics | List users, groups, computers; check lockouts |
+| **Level 2** | Security Investigation | Find stale accounts, audit privileged groups, review password policy |
+| **Level 3** | Management Tasks | Create users/OUs, configure GPOs, manage group membership |
+| **Level 4** | Security Hardening | Enable audit policies, disable LLMNR, review DC security logs |
+
+See: [docs/ad-practice-drills.md](docs/ad-practice-drills.md)
 
 ## Analyst Reference Guide
 
@@ -149,6 +162,7 @@ ad-detection-lab/
 │   ├── sysmon-config.md          # Sysmon configuration choices
 │   ├── lessons-learned.md        # Troubleshooting and fixes
 │   ├── splunk-practice-drills.md # 12 hands-on SPL exercises (4 levels)
+│   ├── ad-practice-drills.md    # 14 hands-on AD exercises (4 levels)
 │   └── analyst-references.md    # MITRE ATT&CK and Event ID research guide
 ├── network-diagram/
 │   └── ad-lab-topology.md        # Mermaid network diagram
