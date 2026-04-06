@@ -1,0 +1,32 @@
+# Virtual Machine files
+*.vmdk
+*.vdi
+*.vhd
+*.ova
+*.ovf
+*.iso
+*.vbox
+*.vbox-prev
+
+# Splunk
+*.log
+local/
+metadata/local.meta
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Credentials and secrets
+*.pem
+*.key
+*.env
+credentials.*
+passwords.txt
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+~$*
