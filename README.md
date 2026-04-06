@@ -99,6 +99,21 @@ All logs are forwarded to Splunk via the Universal Forwarder into the `endpoint`
 
 ---
 
+## Splunk Practice Drills
+
+12 hands-on exercises across 4 difficulty levels to build SPL query skills using this lab's real data. Each drill follows a **DO → FIND → UNDERSTAND** format: perform an action, write the Splunk query, then analyze what you found.
+
+| Level | Focus | Drills |
+|-------|-------|--------|
+| **Level 1** | Basic Searches | Find logins, count events, explore data sources |
+| **Level 2** | Attack Detection | RDP brute force, account creation, scheduled tasks, PowerShell |
+| **Level 3** | Analyst Thinking | Full attack timelines, anomaly hunting, dashboard building |
+| **Level 4** | Advanced SPL | Stats, timechart, eval, transaction correlation |
+
+See the full drill set: [docs/splunk-practice-drills.md](docs/splunk-practice-drills.md)
+
+---
+
 ## Tools & Technologies
 
 - **Virtualization:** Oracle VirtualBox 7.2
@@ -119,7 +134,8 @@ ad-detection-lab/
 │   ├── lab-setup.md              # Full build guide
 │   ├── splunk-setup.md           # Splunk indexer + forwarder config
 │   ├── sysmon-config.md          # Sysmon configuration choices
-│   └── lessons-learned.md        # Troubleshooting and fixes
+│   ├── lessons-learned.md        # Troubleshooting and fixes
+│   └── splunk-practice-drills.md # 12 hands-on SPL exercises (4 levels)
 ├── network-diagram/
 │   └── ad-lab-topology.md        # Mermaid network diagram
 ├── detections/
