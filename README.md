@@ -1,4 +1,5 @@
-# Active Directory Detection Lab
+# THIS REPO IS OUTDATED, AN UPDATED VERSION OF THIS IN CURRENTLY WIP
+## Active Directory Detection Lab
 
 A blue team home lab built to practice detecting real-world attacks against Active Directory using Splunk as a SIEM. The goal is to simulate the workflow of a SOC analyst: generate telemetry, identify malicious activity, write detection queries, and map findings to the MITRE ATT&CK framework.
 
